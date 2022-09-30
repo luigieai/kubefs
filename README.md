@@ -3,6 +3,7 @@
 This project is intended to manage files on a Kubernetes node. It is cloud native and built to run in Kubernetes but can run on  a linux VM outside of Kubernetes. 
 
 - [Original Use case](#original-use-case)
+- [CLI](#cli)
 - [Functionalities](#functionalities)
 - [Usage](#usage)
 
@@ -11,6 +12,15 @@ This project is intended to manage files on a Kubernetes node. It is cloud nativ
 Depending on the IP Camera and the sensitivity level, the motion detection alarm can generate a lot irrelevent captures, making it difficult to identify the false positives from the true positives.
 
 This project is built to manage images generated from motion detection alarm of an IP-Camera(s).
+
+## CLI
+
+- Serve - serves the webserver
+- port - port from which to serve
+- cert - server ceritifcate
+- key - server private key
+- dir - image directory
+
 
 ## Functionalities
 
