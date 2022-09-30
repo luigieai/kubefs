@@ -1,37 +1,37 @@
-# CNCF Project Template Repository
+# Kubefs
 
-This is a [template repository][template-repo] for CNCF projects created by [CNCF SIG Contributor
-Strategy][contrib-strat]. You can use it to either start a new repository that
-has all the required files for a CNCF project or just grab the particular files
-that you need.
+This project is intended to manage files on a Kubernetes node. It is cloud native and built to run in Kubernetes but can run on  a linux VM outside of Kubernetes. 
 
-## Steps
+- [Original Use case](#original-use-case)
+- [Functionalities](#functionalities)
+- [Usage](#usage)
 
-1. Click **Use this template** and create a copy of this repository.
+## Original Use Case
 
-    ![Green button that says "Use this template"](https://user-images.githubusercontent.com/1368985/95903529-e9c32f00-0d5b-11eb-8723-4369f7c9e044.png)
-1. Remove **.github/settings.yml**. This is not a template and contains
-   configuration specific our repository. You should not keep this file.
-1. Customize every [required template](#required-templates) and address each TODO item.
+Depending on the IP Camera and the sensitivity level, the motion detection alarm can generate a lot irrelevent captures, making it difficult to identify the false positives from the true positives.
 
-### Customize Templates
+This project is built to manage images generated from motion detection alarm of an IP-Camera(s).
 
-Each file is a template with instructions to customize the contents for your project.
-Most files use comments with TODO to call out where you need to make changes. We recommend
-viewing the files in raw or text form so that you can see the comments. 
+## Functionalities
 
-For example in markdown files, we use `<!-- TODO: ... -->` to provide additional
-guidance or indicate where action is required but you won't see those comments
-when you view the markdown file in GitHub unless you view the raw text.
+* Deletion logic
+    * Delete images more than X days old
+    * Delete images captured between Date/Time and Date/Time
+    * Retain max size of X in directory 
+      * delete oldest first
+    * Retain X number of files
+      * delete oldest first
+* View Logic
+  * View images by day
+  * View images by day and time
+  * View files by camera
+  * View files by camera, day, and time
+  * View files from given camera on given date
+* Backup Logic
+  * Backup files for X days, then delete
 
-## Required Templates
+## Components
 
-* [LICENSE](LICENSE)
-* [CONTRIBUTING.md](CONTRIBUTING.md)
-* [README-template.md](README-template.md)
-
-[template-repo]: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template
-[contrib-strat]: https://github.com/cncf/sig-contributor-strategy/blob/master/README.md
-
-Note: This is the README file for the templates repo. Please use [README-template.md](README-template.md)
-as a template for your project README.
+* Frontend (React) 
+* Backend (Go 1.19)
+  * CLI

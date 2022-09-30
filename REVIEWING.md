@@ -1,7 +1,4 @@
 # Reviewing Guide
-
-Follow the instructions at [HowTo: Make a Reviewing Guide][howto] file to complete the following sections.
-
 This document covers who may review pull requests for this project, and provides guidance on how to perform code reviews that meet our community standards and code of conduct. All reviewers must read this document and agree to follow the project review guidelines. Reviewers who do not follow these guidelines may have their privileges revoked.
 
 [howto]: https://contribute.cncf.io/maintainers/github/templates/recommended/reviewing/
@@ -10,11 +7,6 @@ This document covers who may review pull requests for this project, and provides
 
 [Instructions](https://contribute.cncf.io/maintainers/github/templates/recommended/reviewing/#the-reviewing-role)
 
-⚠️ **Pick the statement that matches the reviewer role for your project**
-
-Only maintainers review pull requests.
-
-OR
 
 The reviewer role is distinct from the maintainer role. Reviewers can approve a pull request but they cannot merge it. A maintainer handles final approval and merging the pull request.
 
