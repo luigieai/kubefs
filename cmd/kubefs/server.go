@@ -31,15 +31,5 @@ func getServerCommand() *cobra.Command {
 		},
 	}
 
-	cmd.PersistentFlags().StringVarP(&dir, "dir", "", "", "media directory")
-	cmd.PersistentFlags().StringVarP(&key, "key", "", "",
-		"Server private key for TLS. If not provided, TLS will not be used.")
-
-	cmd.PersistentFlags().StringVarP(&cert, "cert", "", "",
-		"Server certificate for TLS. If not provided, TLS will not be used.")
-
-	cmd.PersistentFlags().StringVarP(&port, "port", "p", "8080",
-		"Port to expose the application.")
-
 	return cmd
 }
