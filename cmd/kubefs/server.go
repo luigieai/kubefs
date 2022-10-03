@@ -31,5 +31,7 @@ func getServerCommand() *cobra.Command {
 		},
 	}
 
+	cmd.PersistentFlags().StringVarP(&dir, "dir", "d", "", "Directory from which to manage files")
+
 	return cmd
 }
